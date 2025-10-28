@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instrumentos Musicais</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h3 class="center-align">Instrumentos Musicais</h3>
+
+        <form id="formInstrumentos" class="section">
+            <p><strong>Escolha seu Instrumento Musical:</strong></p>
+            <p>
+                <label><input name="instrumento" type="radio" value="Guitarra"><span>Guitarra</span></label>
+                <label><input name="instrumento" type="radio" value="Baixo"><span>Baixo</span></label>
+                <label><input name="instrumento" type="radio" value="Violão"><span>Violão</span></label>
+                <label><input name="instrumento" type="radio" value="Bateria"><span>Bateria</span></label>
+                <label><input name="instrumento" type="radio" value="Piano"><span>Piano</span></label>
+                <label><input name="instrumento" type="radio" value="Violino"><span>Violino</span></label>
+            </p>
+
+            <p><strong>Escolha a Quantidade:</strong></p>
+            <p>
+                <label><input name="quantidade" type="radio" value="1"><span>1</span></label>
+                <label><input name="quantidade" type="radio" value="2"><span>2</span></label>
+                <label><input name="quantidade" type="radio" value="3"><span>3</span></label>
+                <label><input name="quantidade" type="radio" value="4"><span>4</span></label>
+                <label><input name="quantidade" type="radio" value="5"><span>5</span></label>
+            </p>
+
+            <p><strong>Canhoto/Destro:</strong></p>
+            <p>
+                <label><input name="tipo" type="radio" value="canhoto"><span>Canhoto</span></label>
+                <label><input name="tipo" type="radio" value="destro"><span>Destro</span></label>
+            </p>
+
+            <button class="btn waves-effect waves-light" type="button" id="btnIncluir">
+                Incluir Instrumento
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+
+        <table class="striped responsive-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Instrumento</th>
+                    <th>Quantidade</th>
+                    <th>Canhoto/Destro</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabInstrumentos"></tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ asset('js/index.js') }}"></script>
+</body>
+</html>
