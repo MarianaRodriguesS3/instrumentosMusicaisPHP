@@ -2,12 +2,14 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instrumentos Musicais</title>
 
+    <!-- Materialize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+    <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link href="{{ asset('css/index.css') }}" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -39,7 +41,7 @@
                 <label><input name="tipo" type="radio" value="destro"><span>Destro</span></label>
             </p>
 
-            <button class="btn waves-effect waves-light" type="button" id="btnIncluir">
+            <button class="btn waves-effect waves-light" type="button" onclick="incluirInstrumentos()">
                 Incluir Instrumento
                 <i class="material-icons right">send</i>
             </button>
@@ -48,7 +50,7 @@
         <table class="striped responsive-table">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>id</th>
                     <th>Instrumento</th>
                     <th>Quantidade</th>
                     <th>Canhoto/Destro</th>
@@ -59,7 +61,10 @@
         </table>
     </div>
 
+    <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Seu JS -->
     <script src="{{ asset('js/index.js') }}"></script>
 </body>
 </html>
+ 
